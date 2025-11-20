@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 100% 3%;
+    --foreground: 120 100% 95%;
+
+    --card: 120 20% 8%;
+    --card-foreground: 120 100% 95%;
+
+    --popover: 120 20% 8%;
+    --popover-foreground: 120 100% 95%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 10%;
+
+    --secondary: 120 30% 15%;
+    --secondary-foreground: 120 100% 95%;
+
+    --muted: 120 30% 15%;
+    --muted-foreground: 120 20% 60%;
+
+    --accent: 120 30% 15%;
+    --accent-foreground: 120 100% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 50% 20%;
+    --input: 120 50% 20%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
